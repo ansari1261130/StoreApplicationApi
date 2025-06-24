@@ -1,14 +1,14 @@
 package com.springboot.StoreApplicationApi.mappers;
 
-import com.springboot.StoreApplicationApi.dtos.RegisterUserRequest;
-import com.springboot.StoreApplicationApi.dtos.UserDto;
+import com.springboot.StoreApplicationApi.dtos.user.RegisterUserRequest;
+import com.springboot.StoreApplicationApi.dtos.user.UserDto;
 import com.springboot.StoreApplicationApi.entities.User;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-06-24T01:30:12+0530",
+    date = "2025-06-24T13:04:39+0530",
     comments = "version: 1.6.3, compiler: javac, environment: Java 24.0.1 (Oracle Corporation)"
 )
 @Component

@@ -1,7 +1,7 @@
 package com.springboot.StoreApplicationApi.mappers;
 
-import com.springboot.StoreApplicationApi.dtos.RegisterUserRequest;
-import com.springboot.StoreApplicationApi.dtos.UserDto;
+import com.springboot.StoreApplicationApi.dtos.user.RegisterUserRequest;
+import com.springboot.StoreApplicationApi.dtos.user.UserDto;
 import com.springboot.StoreApplicationApi.entities.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

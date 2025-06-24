@@ -1,4 +1,4 @@
-package com.springboot.StoreApplicationApi.dtos;
+package com.springboot.StoreApplicationApi.dtos.product;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

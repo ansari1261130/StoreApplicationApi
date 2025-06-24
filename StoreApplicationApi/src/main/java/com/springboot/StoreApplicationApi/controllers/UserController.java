@@ -1,15 +1,14 @@
 package com.springboot.StoreApplicationApi.controllers;
 
-import com.springboot.StoreApplicationApi.dtos.ChangePasswordRequest;
-import com.springboot.StoreApplicationApi.dtos.RegisterUserRequest;
-import com.springboot.StoreApplicationApi.dtos.UserDto;
+import com.springboot.StoreApplicationApi.dtos.user.ChangePasswordRequest;
+import com.springboot.StoreApplicationApi.dtos.user.RegisterUserRequest;
+import com.springboot.StoreApplicationApi.dtos.user.UserDto;
 import com.springboot.StoreApplicationApi.mappers.UserMapper;
 import com.springboot.StoreApplicationApi.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.method.HandlerTypePredicate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
