@@ -48,7 +48,12 @@ public class ProductController {
             @RequestBody RegisterProductRequest request,
             UriComponentsBuilder uriBuilder
             ) {
+        var category = categoryRepository.findById(request.getCategoryId()).orElseThrow(()->new IllegalArgumentException("Category not found"));
+        if(category == null) {
+            return ResponseEntity.badRequest().body(null);
+        }
         var product = productMapper.toEntity(request);
+        product.setCategory(category);
         productRepository.save(product);
         var productDto = productMapper.toDto(product);
         var uri = uriBuilder.path("/products/{id}").buildAndExpand(productDto.getId()).toUri();
@@ -60,9 +65,14 @@ public class ProductController {
             @PathVariable(name="id") Long id,
             @RequestBody RegisterProductRequest request
     ) {
+        var category = categoryRepository.findById(request.getCategoryId()).orElseThrow(()->new IllegalArgumentException("Category not found"));
+        if(category == null) {
+            return ResponseEntity.badRequest().body(null);
+        }
         var product = productRepository.findById(id).orElse(null);
         if(product == null) return ResponseEntity.notFound().build();
         productMapper.update(request,product);
+        product.setCategory(category);
         productRepository.save(product);
         return ResponseEntity.ok(productMapper.toDto(product));
     }
